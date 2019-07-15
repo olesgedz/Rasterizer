@@ -4,7 +4,7 @@
 #include <sstream>
 #include <vector>
 #include "model.h"
-
+//https://github.com/ssloy/tinyrenderer/wiki/Lesson-2:-Triangle-rasterization-and-back-face-culling
 Model::Model(const char *filename) : verts_(), faces_() {
     std::ifstream in;
     in.open (filename, std::ifstream::in);
