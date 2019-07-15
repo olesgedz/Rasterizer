@@ -12,10 +12,9 @@
 # 	$(CC) $< -c  -o $@ 
 
 SYSCONF_LINK = g++
-CPPFLAGS     =
-LDFLAGS      =
+CPPFLAGS     = 
+LDFLAGS      =  
 LIBS         = -lm
-
 DESTDIR = ./
 TARGET  = main
 
