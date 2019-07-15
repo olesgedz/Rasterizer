@@ -1,0 +1,9 @@
+[submodule "c/libsdl"]
+	path = c/libsdl
+	url = https://github.com/olesgedz/libsdl.git
+[submodule "c/libft"]
+	path = c/libft
+	url = https://github.com/olesgedz/libft.git
+[submodule "c/libmath"]
+	path = c/libmath
+	url = https://github.com/olesgedz/libmath.git
