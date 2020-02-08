@@ -11,22 +11,22 @@
 # %.o:%.cpp
 # 	$(CC) $< -c  -o $@ 
 
-SYSCONF_LINK = g++
+SYSCONF_LINK = clang++
 CPPFLAGS     = 
 LDFLAGS      =  
 LIBS         = -lm
 DESTDIR = ./
-TARGET  = main
+TARGET  = renderer
 
 OBJECTS := $(patsubst %.cpp,%.o,$(wildcard *.cpp))
 
 all: $(DESTDIR)$(TARGET)
 
 $(DESTDIR)$(TARGET): $(OBJECTS)
-	$(SYSCONF_LINK) -Wall $(LDFLAGS) -o $(DESTDIR)$(TARGET) $(OBJECTS) $(LIBS)
+	$(SYSCONF_LINK) -g -Wall $(LDFLAGS) -o $(TARGET) $(OBJECTS) $(LIBS)
 
 $(OBJECTS): %.o: %.cpp
-	$(SYSCONF_LINK) -Wall $(CPPFLAGS) -c $(CFLAGS) $< -o $@
+	$(SYSCONF_LINK) -g -Wall $(CPPFLAGS) -c $(CFLAGS) $< -o $@
 
 clean:
 	-rm -f $(OBJECTS)
