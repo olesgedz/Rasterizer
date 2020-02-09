@@ -56,7 +56,7 @@ struct Shader : public IShader
 		Vec3f n = (B * model->normal(uv)).normalize();
 
 		float diff = std::max(0.f, n * light_dir);
-		color =  model->diffuse(uv) * diff;
+		color =  TGAColor(255,255,255)  *  diff;// model->diffuse(uv) * diff;
 
 		return false;
 	}
